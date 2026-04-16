@@ -1,22 +1,18 @@
-/* --- 1. إعدادات الصفحة الأساسية --- */
 *{ 
     padding: 0;
     margin: 0;
-    box-sizing: border-box; /* أفضل من border:0 للحفاظ على الأبعاد */
+    box-sizing: border-box;
 }
 .HOME {
     width: 100%;
-    min-height: 100vh; /* طول الشاشة بالكامل */
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; /* ترتيب العناصر (Nav ثم محتوى ثم Footer) */
-    
-    /* صورة الخلفية ثابتة وشاملة للصفحة كلها */
+    flex-direction: column;
     background-image: url("Screenshot 2026-04-12 233637.png"); 
     background-position: center;
     background-size: cover;
-    background-attachment: fixed; /* الصورة لا تتحرك مع السكرول */
+    background-attachment: fixed; /*image is not moving even with scrolling*/
 }
-/* --- 2. الهيدر والتنقل --- */
 .nav {
     display: flex;
     justify-content:flex-end; 
@@ -28,14 +24,13 @@
     font-size: 20px; 
     font-weight: bold;
     margin-left: 30px; 
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* لضمان وضوح اللينكات فوق الصورة */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /*a shodow to give it a good look*/
 }
 .nav a:hover{
-    color: rgb(32, 62, 45);
+    color: rgb(32, 62, 45);/*when you selesct over it with the mouse*/
 }
-/* --- 3. محتوى الصفحة الرئيسي --- */
 .main-content {
-    flex: 1; /* يزق الفوتر لتحت خالص */
+    flex: 1; /*footer is downwards in the padge*/
     padding: 30px;
 }
 div h1 {
@@ -51,17 +46,16 @@ div h1 {
     line-height: 1.7;
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-    max-width: 600px; /* بيخلي النص مياخدش عرض الصفحة كله */
+    max-width: 600px; /*بيخلي الp مياخدش عرض الصفحة كله */
     margin-top: 20px;
 }
-/* --- 4. الفوتر الشفاف في أسفل الصفحة --- */
 .main-footer {
-    background: transparent; /* شفاف تماماً ليظهر ما خلفه */
+    background: transparent; /*we don't need a background*/
     color: white;
     padding: 50px 0 20px 0;
     width: 100%;
     font-family: 'Poppins', sans-serif;
-    margin-top:auto; /* يضمن التصاقه بأسفل الصفحة */
+    margin-top:auto; /*footer is downwards in the padge*/
 }
 .footer-container {
     display: flex;
@@ -71,9 +65,8 @@ div h1 {
     margin: 0 auto;
     background: transparent;
 }
-/* إضافة ظل خفيف لكل نصوص الفوتر لضمان وضوحها فوق الصورة */
 .footer-col h3,.footer-col p,.footer-col ul li a,.footer-bottom p {
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);/*a shodow to give it a good look*/
 }
 .footer-col h3 {
     font-size: 22px;
@@ -81,29 +74,26 @@ div h1 {
     font-weight: 700;
 }
 .footer-col ul {
-    list-style: none;/*بيشيل النقط بتاعه اللست */
+    list-style: none;/*remove the unorderd discks from the list*/
 }
 .footer-col ul li a {
     color: #e0e0e0;
-    text-decoration: none;/*هيشيل الخط الي تحت اللينك*/
+    text-decoration: none;/*remove the underline*/
 }
 .footer-col ul li a:hover {
     color: #30503d;
     padding-left: 5px;
 }
-/* حقوق النشر */
 .footer-bottom {
     text-align: center;
     border-top: 1px solid black;
-    padding-top: 20px;/*الخط هيطلع اد ايه لفوق*/
-    margin-top: 30px;/*الفوتر هيبعد عن الخط ب اد ايه*/
+    padding-top: 20px;
+    margin-top: 30px;
 }
-/*كدا هننقل لصفحه التانيه*/
-/* كهيئه كامله تنسيق للجدول */
+/*moving to the next padge*/
 .main-content {
-    padding: 15px 50px;  /*20 فوق وتحت و 60 عرض */
+    padding: 15px 50px;/*15 فوق وتحت و 50 عرض */
 }
-/* من جوا تنسيق الجدول الأساسي */
 .styled-table {
     width: 100%;
     border-collapse: collapse; /* بيخلي الخطوط رفيعة ومنظمة */
@@ -112,121 +102,105 @@ div h1 {
     color: #121212;
     font-size: 20px;
 }
-/* تنسيق العناوين (Header) */
 .styled-table th {
-    background-color: #63062d; /* لون نبيتي زي الثيم بتاعك */
+    background-color: #63062d;
     color: white;
     padding: 20px;
     text-align: left;
 }
-/* تنسيق الخلايا (Cells) */
 .styled-table td {
     padding: 12px 15px;
     border: 1px solid #333333;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
-/* تأثير عند الوقوف على الصف بالماوس */
 .styled-table tr:hover {
     background-color: #f2f2f2;
 }
-/* تنسيق الصفحة الثانية بلون سادة متناسق */
 .courses-page {
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* لون خلفية هادئ ومتناسق (بين الوردي الفاتح والرمادي) */
     background-color:rgb(209, 210, 181) ;
-    height: 100vh;         /* طول ثابت يساوي الشاشة بالضبط */
+    height: 100vh;    
     display: flex;
     flex-direction: column;
-    overflow: hidden;       /* منع ظهور أي سكرول بار */
+    overflow: hidden;    /*avoid scrolling par */
 }
-
 .COURSES-PAGE .main-footer {
-    padding: 10px 0;        /* تصغير حجم الفوتر جداً عشان مياخدش مساحة */
-    margin-top: auto;       /* يضمن بقاءه في القاع */
-} ; 
-
-/* تعديل لون العنوان في الصفحة الثانية عشان يبان فوق الخلفية الفاتحة */
+    padding: 10px 0;        
+    margin-top: auto; 
+}
 .courses-page h1 {
     color: #eeedee;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     margin-bottom: 20px;
 }
-/* تعديل لينكات التنقل في الصفحة الثانية عشان تبان */
 .courses-page .nav a {
     color: #f8f8f8;
 }
-
 .courses-page .nav a:hover {
     color: #365444;
 }
 .footer-low {
     text-align: center;
     border-top: 1px solid rgb(104, 64, 81);
-    padding-top: 25px;/*الخط هيطلع اد ايه لفوق*/
-    margin-top: 40px;/*الفوتر هيبعد عن الخط ب اد ايه*/
+    padding-top: 25px;
+    margin-top: 40px;
     font-family: 'Poppins', sans-serif;
     font-size:bold;
     color: white;
 }
 /*كدا هنبدا الصفحه التالته*/
-/* تعديل محتوى الصفحة لسنترة الفورم */
 .COURSES-PAGE{
     background-color:rgb(209, 210, 181) ;
 }
 .COURSES-PAGE .main-content {
     display: flex;
-    justify-content: center; /* سنترة أفقية */
-    align-items: center;     /* سنترة رأسية */
+    justify-content: center; 
+    align-items: center;     
     flex: 1;
     padding: 20px;
     gap: 80px;
 }
-/* تكبير الفورم */
 .form-container {
     background-color:#63062d;
-    padding: 40px;          /* زيادة المساحة الداخلية */
+    padding: 40px;        
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     width: 100%;
-    max-width: 750px;       /* تكبير عرض الفورم */
+    max-width: 750px;      
 }
 .form-group {
     margin-bottom: 25px;
     display: flex;
-    flex-direction: column; /* يخلي الليبل فوق الصندوق */
+    flex-direction: column; 
     align-items: flex-start;
-    width: 100%; /* يضمن إن المجموعة واخدة العرض كله */
+    width: 100%;
 }
-/* تكبير الخطوط داخل الفورم */
 .form-group label {
-    font-size: 18px;        /* تكبير حجم العناوين */
+    font-size: 18px;      
     margin-bottom: 10px;
     color: white;
     margin-bottom: 25px;
-/* يضمن إن المجموعة واخدة العرض كله */
 }
-
 .form-group input, .form-group select {
-    padding: 15px;          /* تكبير صناديق الكتابة */
+    padding: 15px;          
     font-size: 15px;
-    width: 100%; /* ده السطر اللي هيخليهم يملأوا الفورم */
+    width: 100%; 
     padding: 12px 15px;
     border-radius: 8px;
     border: none;
     font-size: 16px;
-    box-sizing: border-box; /* بيضمن إن الـ padding ميزودش العرض عن 100% */
+    box-sizing: border-box; 
 }
-
 .submit-btn {
     padding: 15px;
-    font-size: 18px;        /* تكبير زرار الحفظ */
+    font-size: 18px;        
     font-weight: bold;
-    width: 100%; /* الزرار كمان هيكون بنفس عرض الصناديق */
+    width: 100%; 
     padding: 15px;
-    background-color: #f8f1f4; /* لون فاتح يكسر حدة النبيتي */
+    background-color: #f8f1f4; 
     color: #63062d;
     border: none;
     border-radius: 8px;
@@ -237,25 +211,22 @@ div h1 {
 }
 .submit-btn:hover{background-color: lightgray;}
 .COURSES-PAGE {
-    height: 100vh;          /* طول ثابت يساوي الشاشة بالضبط */
+    height: 100vh;          
     display: flex;
     flex-direction: column;
-    overflow: hidden;       /* منع ظهور أي سكرول بار */
+    overflow: hidden;       
 }
-
 .COURSES-PAGE .main-footer {
-    padding: 10px 0;        /* تصغير حجم الفوتر جداً عشان مياخدش مساحة */
-    margin-top: auto;       /* يضمن بقاءه في القاع */
+    padding: 10px 0;        
+    margin-top: auto;      
 }
 /*كدا هنبدأ أخر صفحه خلاص */
-/* تنسيق قسم التواصل */
 .contact-section {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 70px; /* مسافة بين بيانات التواصل والفورم الصغيرة */
 }
-
 .contact-info-card {
     background-color: rgb(235, 230, 230);
     padding: 40px;
@@ -263,31 +234,25 @@ div h1 {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     max-width: 750px;
 }
-
 .contact-list {
     list-style: none; /* شلنا النقط التقليدية */
     margin-top: 20px;
     background-color: rgb(234, 230, 230);
 }
-
 .contact-list li {
     font-size: 18px;
     margin-bottom: 15px;
     color: #333;
 }
-
-/* تنسيق الفورم الصغيرة الجانبية */
 .mini-form {
-    background-color: #63062d; /* نبيتي عشان التناسق */
+    background-color: #63062d;
     padding: 30px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     width: 350px;
 }
-
 .mini-form h3 { color: white; margin-bottom: 15px; }
-
 .mini-form input, .mini-form textarea {
     padding: 10px;
     margin-bottom: 15px;
@@ -295,98 +260,78 @@ div h1 {
     border: none;
     outline: none;
 }
-
 .mini-form textarea { height: 100px; resize: none; }
-/* --- إعدادات الـ Responsive (للموبايل والتابلت) --- */
-
+/*Responsive */
 @media (max-width: 992px) {
     div h1 {
-        font-size: 50px; /* تصغير العنوان في التابلت */
+        font-size: 50px;
     }
-    
     .contact-section {
         gap: 30px;
     }
 }
-
 @media (max-width: 768px) {
-    /* 1. الناف بار: الروابط تيجي تحت بعض */
     .nav {
         flex-direction: column;
         align-items: center;
         padding: 20px;
     }
-    
     .nav a {
         margin: 5px 0;
         font-size: 18px;
     }
-
-    /* 2. الهوم بيدج: توسيط الكلام */
     .main-content {
         text-align: center;
         padding: 20px;
     }
-
     div h1 {
         font-size: 35px; /* تصغير العنوان للموبايل */
     }
-
     .main-content p {
         font-size: 18px;
         margin: 20px auto;
     }
-
-    /* 3. الجداول: السماح بالسكرول العرضي عشان ميبوظش الشاشة */
+    /*السماح بالسكرول العرضي عشان ميبوظش الشاشة*/
     .styled-table {
         display: block;
         overflow-x: auto;
         white-space: nowrap;
     }
-
-    /* 4. الفورم وصفحة التواصل: العناصر تحت بعض وبالعرض الكامل */
+    /*العناصر تحت بعض وبالعرض الكامل*/
     .COURSES-PAGE .main-content {
-        flex-direction: column; /* العنوان والفورم تحت بعض */
-        overflow-y: auto; /* السماح بالسكرول الرأسي لو الفورم طويلة */
+        flex-direction: column; /* العنوان والفورم تحت بعض*/
+        overflow-y: auto; /*السماح بالسكرول لو الفورم طويلة*/
         height: auto;
         gap: 30px;
     }
-
     .form-container {
         max-width: 100%;
         padding: 20px;
     }
-
     .contact-section {
-        flex-direction: column; /* الكارت والفورم الصغيرة تحت بعض */
+        flex-direction: column;
         padding: 20px;
     }
-
     .contact-info-card, .mini-form {
         width: 100%;
         max-width: 100%;
     }
-
-    /* 5. الفوتر */
     .footer-container {
         flex-direction: column;
         gap: 20px;
         text-align: center;
     }
-
-    /* إلغاء منع السكرول في الموبايل عشان المستخدم يقدر يشوف باقي المحتوى */
+    /*اتاحه السكرول في الموبايلى*/
     .courses-page, .COURSES-PAGE {
         overflow: auto; 
         height: auto;
     }
 }
-
-/* لشاشات الموبايل الصغيرة جداً */
+/*شاشات الموبايل الصغيره */
 @media (max-width: 480px) {
     div h1 {
         font-size: 28px;
     }
-    
     .nav a {
         font-size: 16px;
     }
